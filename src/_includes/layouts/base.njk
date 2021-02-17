@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" class="no-js {% if request.user.is_authenticated %}user-authed{% else %}user-unauthed{% endif %} {% if request.user.is_recruiter %}user-is-recruiter{% endif %} {% block html_class_names %}{% endblock %}">
+  <head>
+    {% include "components/head-meta.njk" %}
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+    {% block css %}
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet">
+    {% endblock %}
+  </head>
+
+  <body>
+    <div class="primary-container">
+      {% block banner %}
+        {% include "components/nav_primary.njk" %}
+      {% endblock %}
+
+      {% block messages %}
+        {% include "components/messages.njk" %}
+      {% endblock %}
+
+      {% block content %}{% endblock content %}
+    </div>
+
+    {% block contentinfo %}
+      {% include "components/contentinfo.njk" %}
+    {% endblock %}
+
+    {% block modal %}{% endblock modal %}
+
+    {% block javascript %}
+      {% include "components/scripts.njk" %}
+    {% endblock javascript %}
+  </body>
+</html>
+

@@ -1,0 +1,36 @@
+{
+  "name": "limbo-archive",
+  "version": "1.0.0",
+  "description": "This is a static version of Limbo for archival purposes.",
+  "main": "index.js",
+  "repository": "git@github.com:tylergaw/limbo-archive.git",
+  "bugs": "https://github.com/tylergaw/limbo-archive/issues",
+  "contributors": [
+    "Tyler Gaw <me@tylergaw.com>"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "ELEVENTY_ENV=local netlify dev",
+    "build": "ELEVENTY_ENV=production eleventy",
+    "lint": "eslint --fix --ext .js",
+    "prettier": "prettier --write src/"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "0.11.0",
+    "eslint": "7.5.0",
+    "eslint-config-prettier": "6.11.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.11",
+    "netlify-cli": "3.8.3",
+    "prettier": "2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint --fix",
+    "src/**/*": "prettier --write"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "background_color": "#ffffff",
+  "theme_color": "#1d0354",
+  "display": "standalone",
+  "short_name": "Limbo",
+  "name": "Limbo",
+  "lang": "en-US",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "images/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

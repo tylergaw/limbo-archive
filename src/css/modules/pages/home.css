@@ -1,0 +1,74 @@
+.home-how-it-works {
+  border-top: 2px solid var(--color-brand-red);
+  padding-top: calc(var(--g-row) * 1.5);
+  text-align: center;
+}
+
+.how-it-works-title {
+  color: var(--color-neutral-gray-80);
+  font-size: calc(28 / 16 * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 calc(var(--g-row) * 0.5) 0;
+}
+
+.how-it-works-steps {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: var(--g-row) 0 0 0;
+}
+
+.how-it-works-step {
+  flex-basis: 100%;
+  list-style: none;
+  padding-bottom: calc(var(--g-row) * 05);
+  position: relative;
+}
+
+.how-it-works-step img {
+  display: block;
+  margin: 0 auto;
+  max-width: calc(280 / 16 * 1rem);
+  width: 60%;
+}
+
+.how-it-works-step h4 {
+  color: var(--color-brand-red);
+  font-size: calc(24 / 16 * 1rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: calc(var(--g-row) * 0.25) auto 0 auto;
+  padding: 0;
+}
+
+.how-it-works-step p {
+  box-sizing: border-box;
+  font-size: calc(14 / 16 * 1rem);
+  line-height: 1.5;
+  margin: calc(var(--g-row) * 0.5) auto 0 auto;
+  max-width: calc(353 / 16 * 1rem);
+}
+
+.how-it-works-step:first-child::after,
+.how-it-works-step:last-child::before {
+  background: transparent url("/images/how-arrow.svg") no-repeat center center;
+  background-size: 100%;
+  content: "";
+  display: block;
+  height: 60px;
+  left: 40%;
+  position: absolute;
+  width: 80px;
+}
+
+.how-it-works-step:first-child::after {
+  bottom: var(--g-row);
+  transform: rotate(90deg);
+}
+
+.how-it-works-step:last-child::before {
+  top: -80px;
+  transform: rotate(90deg) scaleY(-1);
+}

@@ -1,0 +1,22 @@
+html {
+  /* color definitions */
+  --color-brand-red: #ff3030;
+
+  --color-neutral-gray-85: #272727;
+  --color-neutral-gray-80: #333;
+
+  --color-base: #1d0354;
+  --color-accent: #0526ff;
+
+  /* color general aliases */
+  --color-text-primary: var(--color-neutral-gray-85);
+}
+
+html,
+body {
+  color: var(--color-text-primary);
+}
+
+a {
+  color: var(--color-accent-active);
+}

@@ -1,0 +1,94 @@
+---
+meta:
+  description: Find your next great teammate or post your ideal next role and let companies introduce themselves.
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block html_class_names %}page-home{% endblock %}
+
+{% block content %}
+
+{% include "components/home_hero.njk" %}
+
+<div class="home-how-it-works restricted-width-container">
+  <h2 class="how-it-works-title">Here’s How it Works:</h2>
+  <ol class="how-it-works-steps">
+    <li class="how-it-works-step">
+      <img src="/images/how-candidates-1.svg"
+        alt="A cartoon-style illustration of a shining lightbulb and stylized Limbo Profile in a web browser." />
+
+      <h4>Candidates Post<br /> Anonymous Profiles</h4>
+      <p>
+        Detailing their skills, experience, and exactly the role they want:
+        values, location, seniority, etc. Posting is&nbsp;free.
+      </p>
+    </li>
+    <li class="how-it-works-step">
+      <img src="/images/how-managers-1.svg"
+        alt="A cartoon-style illustration of a magnifying glass and stylized Limbo Profile search results in a web browser." />
+
+      <h4>Managers Find &amp;<br /> Reveal Profiles</h4>
+      <p>
+        When they find a good match, they make a Reveal Request, introducing
+        themselves and their role, for&nbsp;free.
+      </p>
+    </li>
+    <li class="how-it-works-step">
+      <img src="/images/how-candidates-2.svg"
+        alt="A cartoon-style illustration of chat bubbles and stylized Limbo Reveal Request UI in a web browser." />
+
+      <h4>Candidates Vet &amp;<br /> Accept Reveals</h4>
+      <p>
+        If accepted, the candidate's identity is shared. The manager pays {{ site.COST_PER_REVEAL_FORMATTED }} for the introduction. Two people are happy.
+      </p>
+    </li>
+  </ol>
+</div>
+
+<div class="profiles-card-list">
+  <div class="profiles-card-list-restricted-width">
+    <h2 class="profiles-lede">
+      <strong>FIXME: Show search form</strong>
+
+      <a href="/search" class="btn-x-small btn">
+        Refine Search
+      </a>
+    </h2>
+  <strong>FIXME: Display profiles</strong>
+  {#
+  {% if profiles %}
+    <ul class="profiles-card-items-container">
+    {% for profile in profiles %}
+      {% include "components/profile_card.njk" with profile=profile %}
+    {% endfor %}
+      <li class="profiles-card-list-item {% if request.user.is_recruiter %}profiles-recruiter-cta{% endif %}">
+        <div class="profiles-card-list-item-cta">
+          <a href="/search" class="profiles-card-list-link-cta">
+            <div>
+              <strong>Search Profiles</strong>
+            {% if not request.user.is_recruiter %}
+              <p>If you want to hire great folks.</p>
+            {% endif %}
+            </div>
+          </a>
+
+          {% if not request.user.is_recruiter %}
+          <span class="profiles-card-list-cta-or">or</span>
+
+          <a href="/profiles/new" class="profiles-card-list-link-cta">
+            <div>
+              <strong>Post a Profile</strong>
+              <p>If you want to find great work.</p>
+            </div>
+          </a>
+          {% endif %}
+        </div>
+      </li>
+    </ul>
+  {% endif %}
+  #}
+  </div>
+</div>
+
+{% endblock %}
