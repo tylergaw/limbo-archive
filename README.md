@@ -1,4 +1,4 @@
-# Limbo Archive
+# Limbo Archive [![Netlify Status](https://api.netlify.com/api/v1/badges/a9617eec-8073-4516-879f-ca6c2dbe3e32/deploy-status)](https://app.netlify.com/sites/limbo-archive/deploys)
 
 ⚠️ **Heavy work in progress**
 
