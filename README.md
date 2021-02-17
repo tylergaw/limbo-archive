@@ -2,11 +2,12 @@
 
 ⚠️ **Heavy work in progress**
 
-This is a static version of Limbo for archival purposes.
+This is a static version of Limbo.io. Built for for archival purposes. Everything
+is made up and the points don't matter.
 
 ## Environments
 
-- FIXME: Production: [limbo-archive.netlify.app/](https://limbo-archive.netlify.app/)
+- Production: [limbo-archive.netlify.app/](https://limbo-archive.netlify.app/)
 - Staging: Every pull request gets a preview deploy URL. Check the PR or Netlify UI for it.
 
 ## Contributing
@@ -23,10 +24,8 @@ This is a static version of Limbo for archival purposes.
 
 #### Clone the repo
 
-FIXME
-
 ```
-git clone git@github.com:orgname/repo-name.git
+git clone git@github.com:tylergaw/limbo-archive.git
 cd repo-name
 ```
 
